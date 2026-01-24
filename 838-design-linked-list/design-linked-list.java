@@ -30,7 +30,7 @@ class MyLinkedList {
     
     public void addAtHead(int val) {
         Node newNode=new Node(val);
-        if(size==0){
+        if(head==null){
             head=newNode;
             tail=newNode;
         }
@@ -44,7 +44,7 @@ class MyLinkedList {
     
     public void addAtTail(int val) {
          Node newNode=new Node(val);
-        if(size==0){
+        if(head==null){
             head=newNode;
             tail=newNode;
         }
@@ -85,22 +85,21 @@ class MyLinkedList {
         if(index==0){
             head=head.next; 
             if(size==1){ tail=null;}
-            size--;
-            return;
+            
         }
         
-        
+ else{
     
     Node temp=head;
     for(int i=0;i<index-1;i++){
         
         temp=temp.next;
     }
-    if(index==size-1){
+    if(temp.next==tail){
             tail=temp;
-            temp.next=null;
+            
         }
-        else{
+        
     temp.next=temp.next.next;
         }
         
