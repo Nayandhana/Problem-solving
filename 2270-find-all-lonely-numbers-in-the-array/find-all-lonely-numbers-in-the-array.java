@@ -7,20 +7,20 @@ class Solution {
             return s;
         }
         for (int i = 0; i < nums.length; i++) {
-            int isInvalid = 0; 
+            int a = 0; 
             if (i > 0) {
-                int leftDiff = nums[i] - nums[i - 1];
-                if (leftDiff == 0 || leftDiff == 1) {
-                    isInvalid = 1;
+                int b = nums[i] - nums[i - 1];
+                if (b== 0 ||b == 1) {
+                    a = 1;
                 }
             }
             if (i < nums.length - 1) {
-                int rightDiff = nums[i + 1] - nums[i];
-                if (rightDiff == 0 || rightDiff == 1) {
-                    isInvalid = 1;
+                int c = nums[i + 1] - nums[i];
+                if (c == 0 || c == 1) {
+                    a = 1;
                 }
             }
-            if (isInvalid == 0) {
+            if (a == 0) {
                 s.add(nums[i]);
             }
         }
