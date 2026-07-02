@@ -7,8 +7,8 @@ class Solution {
         sum+=nums[i];
        }
        long left=0;
-        for(int j=0;j<nums.length-1;j++){
-            left+=nums[j];
+        for(int i=0;i<nums.length-1;i++){
+            left+=nums[i];
              long right=sum-left;
              if(left>=right) count++;
         }
